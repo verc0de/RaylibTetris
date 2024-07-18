@@ -30,7 +30,7 @@ public:
     bool gameOver;
     int score;
     ~Game();
-    Music Music;
-    Sound rotateSound;
-    Sound clearSound;
+    //Music Music;
+    //Sound rotateSound;
+    //Sound clearSound;
 };

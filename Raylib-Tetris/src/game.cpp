@@ -11,20 +11,20 @@ Game::Game()
     nextBlock = getRandomBlock();
     gameOver = false;
     score = 0;
-    InitAudioDevice();  //Sets up audio device
-    Music = LoadMusicStream("Sounds/Connected (Yours Forever).mp3");
-    PlayMusicStream(Music);
-    rotateSound = LoadSound("Sounds/Vine Boom Sound Effect.mp3");
-    clearSound = LoadSound("Sounds/tetris_game_boy_line_clear_sound_effects.mp3");
+    //InitAudioDevice();  //Sets up audio device
+    //Music = LoadMusicStream("Sounds/Connected (Yours Forever).mp3");
+    //PlayMusicStream(Music);
+    //rotateSound = LoadSound("Sounds/Vine Boom Sound Effect.mp3");
+    //clearSound = LoadSound("Sounds/tetris_game_boy_line_clear_sound_effects.mp3");
 
 }
 
 Game::~Game()
 {
-    UnloadSound(rotateSound);
-    UnloadSound(clearSound);
-    UnloadMusicStream(Music);
-    CloseAudioDevice();
+    //UnloadSound(rotateSound);
+    //UnloadSound(clearSound);
+    //UnloadMusicStream(Music);
+    //CloseAudioDevice();
 }
 Block Game::getRandomBlock()
 {
@@ -202,7 +202,7 @@ void Game::LockBlock()
     int rowsCleared = grid.ClearFullRows();
     if (rowsCleared>0)
     {
-        PlaySound(clearSound);
+        //PlaySound(clearSound);
         updateScore(rowsCleared, 0);
     }
     
